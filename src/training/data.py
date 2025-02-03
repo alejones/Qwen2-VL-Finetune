@@ -295,6 +295,8 @@ class DataCollatorForSupervisedDataset(object):
     
 
 def replace_image_tokens(input_string, is_video=False):
+    if not isinstance(input_string, str):
+        return input_string
 
     if is_video:
         input_string = input_string.replace(LLAVA_VIDEO_TOKEN+'\n', VISION_START_TOKEN+DEFAULT_VIDEO_TOKEN+VISION_END_TOKEN)
