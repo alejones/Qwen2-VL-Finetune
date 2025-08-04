@@ -7,7 +7,7 @@ MODEL_NAME="Qwen/Qwen2.5-VL-7B-Instruct"
 export PYTHONPATH=src:$PYTHONPATH
 
 python src/merge_lora_weights.py \
-    --model-path output/sept_sample/v7_7b \
+    --model-path output/sept_sample/v2_7b \
     --model-base $MODEL_NAME  \
-    --save-model-path output/sept_sample/v7_7b/merged \
+    --save-model-path output/sept_sample/v2_7b/merged_full \
     --safe-serialization

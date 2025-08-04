@@ -1,0 +1,10 @@
+{
+  "image": "docker.io/john119/vlm",
+  "workspaceMount": "source=${localWorkspaceFolder},target=/home/app,type=bind",
+  "workspaceFolder": "/home/app",
+  "runArgs": [
+    "--shm-size=60g",
+    "--device=nvidia.com/gpu=all"
+  ],
+  "postCreateCommand": "source activate train"
+}

@@ -6,6 +6,7 @@ def merge_lora(args):
     processor, model = load_pretrained_model(model_path=args.model_path, model_base=args.model_base,
                                              model_name=model_name, device_map='cpu')
 
+    # Save the merged model weights
     model.save_pretrained(args.save_model_path, safe_serialization=args.safe_serialization)
     processor.save_pretrained(args.save_model_path)
 
